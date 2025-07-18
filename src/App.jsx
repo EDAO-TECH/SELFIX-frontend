@@ -1,14 +1,17 @@
-import CheckoutButton from './CheckoutButton';
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import Pricing from './pages/Pricing'
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50 p-4">
-      <h1 className="text-3xl font-bold text-center mb-8">SELFIX Product Structure</h1>
-      <p className="text-center mb-4">Your logic. Sealed. Healed. Trusted.</p>
-      <CheckoutButton />
-    </div>
-  );
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/pricing" element={<Pricing />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
-
-export default App;
-
