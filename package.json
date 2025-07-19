@@ -12,6 +12,7 @@
   "dependencies": {
     "@stripe/react-stripe-js": "^3.7.0",
     "@stripe/stripe-js": "^7.5.0",
+    "@supabase/supabase-js": "^2.52.0",
     "@tailwindcss/vite": "^4.0.6",
     "@tanstack/react-router": "^1.121.2",
     "@tanstack/react-router-devtools": "^1.121.2",
