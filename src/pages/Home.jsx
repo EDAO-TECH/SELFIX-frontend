@@ -1,20 +1,44 @@
-import { Link } from 'react-router-dom';
-import { ReactComponent as Logo } from '../assets/SELFIX_officiall_logo.svg';
+import React from 'react';
+import Logo from '../assets/svg/logo.svg'; // ✅ Fixed the path
+import '../styles.css';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-6 text-center">
-      <Logo className="w-32 h-32 text-indigo-600 mb-4" />
-      <h1 className="text-4xl font-bold text-gray-800 mb-4">Welcome to SELFIX</h1>
-      <p className="text-gray-600 max-w-xl mb-6">
-        The trusted cyber healing platform. Protect your systems, heal from threats, and ensure compliance with our AI-driven engine.
-      </p>
-      <Link
-        to="/pricing"
-        className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow"
-      >
-        View Pricing Plans
-      </Link>
+    <div className="home-container">
+      <header className="home-header">
+        <img src={Logo} alt="SELFIX Logo" className="logo" />
+        <h1>Welcome to SELFIX</h1>
+        <p>Your logic. Sealed. Healed. Trusted.</p>
+      </header>
+
+      <main className="home-content">
+        <section className="hero">
+          <h2>Cyber Recovery Platform</h2>
+          <p>
+            SELFIX goes beyond antivirus. We heal broken systems with AI, rollback engines, and sealed logic.
+          </p>
+          <a href="/pricing" className="cta-button">
+            View Plans
+          </a>
+        </section>
+
+        <section className="features">
+          <h3>Key Features</h3>
+          <ul>
+            <li>🧠 AI Healing Engine</li>
+            <li>🔁 Rollback Recovery</li>
+            <li>🔐 SmartLicense-X™</li>
+            <li>📊 Healing Dashboard</li>
+            <li>🧾 Compliance Logs</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer className="home-footer">
+        <p>© {new Date().getFullYear()} SELFIX. All rights reserved.</p>
+      </footer>
     </div>
   );
-}
+};
+
+export default Home;
