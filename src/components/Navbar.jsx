@@ -1,21 +1,31 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { ReactComponent as Logo } from '../assets/svg/logo.svg';
 
-const Navbar = () => {
+export default function Navbar() {
   return (
-    <nav className="bg-white shadow px-4 py-3 mb-6">
-      <div className="max-w-5xl mx-auto flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold text-indigo-600">
-          Selfix
-        </Link>
-        <div className="space-x-4">
-          <Link to="/" className="text-gray-700 hover:text-indigo-600">Home</Link>
-          <Link to="/pricing" className="text-gray-700 hover:text-indigo-600">Pricing</Link>
-          <Link to="/login" className="text-gray-700 hover:text-indigo-600">Login</Link>
+    <header className="bg-white shadow-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <Logo className="h-8 w-auto text-indigo-600" />
+            <span className="text-xl font-bold text-gray-800 tracking-tight">SELFIX</span>
+          </Link>
+
+          {/* Navigation links */}
+          <nav className="hidden md:flex space-x-8">
+            <Link to="/pricing" className="text-gray-600 hover:text-indigo-600 font-medium">
+              Pricing
+            </Link>
+            <Link to="/login" className="text-gray-600 hover:text-indigo-600 font-medium">
+              Login
+            </Link>
+          </nav>
+
+          {/* Mobile menu (optional for future) */}
+          {/* You can add a hamburger menu here */}
         </div>
       </div>
-    </nav>
+    </header>
   );
-};
-
-export default Navbar;
+}
