@@ -1,12 +1,4 @@
-node_modules
-.DS_Store
-dist
-dist-ssr
-*.local
-count.txt
+logs/
+__pycache__/
 .env
-.nitro
-.tanstack
-
-# Local Netlify folder
-.netlify
+*.pyc
