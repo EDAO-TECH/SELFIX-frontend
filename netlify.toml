@@ -1,17 +1,9 @@
 [build]
-<<<<<<< HEAD
-  command = "npm install && npm run build"
-  publish = "dist"
-  functions = "netlify/functions"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-=======
   command = "npm run build"
   publish = "dist"
-[functions]
-directory = ""
 
->>>>>>> fb33d9c6 (Initial commit of SELFIX frontend)
+[[redirects]]
+  from = "http://selfix.pro/*"
+  to = "https://www.selfix.pro/:splat"
+  status = 301
+  force = true
