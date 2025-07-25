@@ -1,4 +1,5 @@
 [build]
+<<<<<<< HEAD
   command = "npm install && npm run build"
   publish = "dist"
   functions = "netlify/functions"
@@ -7,3 +8,10 @@
   from = "/*"
   to = "/index.html"
   status = 200
+=======
+  command = "npm run build"
+  publish = "dist"
+[functions]
+directory = ""
+
+>>>>>>> fb33d9c6 (Initial commit of SELFIX frontend)
